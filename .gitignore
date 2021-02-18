@@ -3,7 +3,6 @@ data/raw_external/*
 !data/raw_external/README.md
 !data/raw_external/dbcan
 !data/raw_external/phylo_tree
-
 data/intermediate/*
 !data/intermediate/README.md
 
