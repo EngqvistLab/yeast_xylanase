@@ -1,0 +1,41 @@
+# folders holding data (which tends to be too big for git), bot do sync the readme files
+data/raw_external/*
+!data/raw_external/README.md
+!data/raw_external/dbcan
+!data/raw_external/phylo_tree
+
+data/intermediate/*
+!data/intermediate/README.md
+
+
+
+# the scratch folder which, by definition should not contain anything worth saving
+scratch/
+
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Distribution / packaging
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Other rubbish that accumulates
+\.#*
+*~
+.Rproj.user
+.Rhistory
+.RData
+.ipynb_checkpoints/
