@@ -14,7 +14,7 @@ conda env activate xylanase
 In addition to the computational environment indicated above, SignalP (http://www.cbs.dtu.dk/services/SignalP/, version 5.0b) has to be installed manually before running the scripts in this repository.
 
 
-The Notebooks are abundantly annotated and should hopefully be self-explanatory. All data files needed to carry out the analysis and produce the related publication figures are included in the repository. Additionally, the full analysis requires the downloading of data files from the Zenodo data repository (http://doi.org/10.1016/j.cell.2018.10.023). The download should be carried out automatically when running the notebooks. **A pre-requisite for this** is that your system has `wget` and `unzip` installed (typically available in Unix systems). An alternative is to manually download the files and extract them. Finally, the analysis relies on accessory code from one of our other repositories (https://github.com/EngqvistLab/tome). This will be automatically installed if using Miniconda and the environment.yml file.
+The Notebooks are abundantly annotated and should hopefully be self-explanatory. All data files needed to carry out the analysis and produce the related publication figures are included in the repository, except for external sequence data files which need to be downloaded from a Figshare data repository (DOI: 10.6084/m9.figshare.5854692; https://figshare.com/articles/Tempo_and_mode_of_genome_evolution_in_the_budding_yeast_subphylum/5854692), and are described in the original publication (https://doi.org/10.1016/j.cell.2018.10.023). The download should be carried out automatically when running the notebooks. **A pre-requisite for this** is that your system has `wget` and `unzip` installed (typically available in Unix systems). An alternative is to manually download the files and extract them. Finally, the analysis relies on accessory code from one of our other repositories (https://github.com/EngqvistLab/tome). This will be automatically installed if using Miniconda and the environment.yml file.
 
 ### Output file description
 The main output file is the "332_yeast_genomes_enzyme_info_version_3.tsv" tab-separated output file (found in the `/data/final/` folder). Each row in the data file indicated one gene with a single corresponding hmm hit at a specific position in the gene. A gene can (and often does) occur multiple times with different hmm model hits or hits with the same hmm model but at different positions inside the gene. Below follows a description of the data contained in each column of the output file. The name of each gene is specified and the corresponding protein sequence can be obtained from the organism fasta files obtained from the Zenodo repository indicated above.
@@ -136,13 +136,13 @@ value type: integer
     │   ├── final                    <- Folder holding output files of processed data
     │   │
     │   ├── intermediate             <- Folder holding intermediate data that has been transformed
-    │   │   ├── hmm_output           <- Folder
-    │   │   ├── signalp_output       <- Folder
+    │   │   ├── hmm_output           <- Folder holding output from HMMER
+    │   │   ├── signalp_output       <- Folder holding output from SignalP
     │   │   └── tempo_in_genome      <- Folder
     │   │
     │   └── raw_external             <- Folder holding raw unmodified experimental data
-    │       ├── dbcan                <- Folder
-    │       ├── phylo_tree           <- Folder containing
-    │       └── tempo_in_genome      <- Folder containing
+    │       ├── dbcan                <- Folder holding the dbCAN hmm models
+    │       ├── phylo_tree           <- Folder holding the phylogenetic tree files
+    │       └── tempo_in_genome      <- Folder holding the
     │
     └── doc                          <- Folder containing accessory information
