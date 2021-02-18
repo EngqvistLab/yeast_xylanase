@@ -1,4 +1,7 @@
-#### Folder containing cleaned/final data for figures/visualizations
+## Folder containing cleaned/final data for figures/visualizations
+
+### Output file description
+The main output file is the "332_yeast_genomes_enzyme_info_version_3.tsv" tab-separated output file. Each row in the data file indicated one gene with a single corresponding hmm hit at a specific position in the gene. A gene can (and often does) occur multiple times with different hmm model hits or hits with the same hmm model but at different positions inside the gene. Below follows a description of the data contained in each column of the output file. The name of each gene is specified and the corresponding protein sequence can be obtained from the organism fasta files obtained from the Figshare repository indicated above.
 
 **The columns in the output file `332_yeast_genomes_enzyme_info_version_3.tsv` are as follows:**
 
