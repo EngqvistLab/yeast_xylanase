@@ -8,10 +8,10 @@ The scripts in this repository are in the form of Jupyter Notebooks and rely on 
 
 ```bash
 conda env create -f environment.yml
-conda env activate annotation_error
+conda env activate xylanase
 ```
 
-In addition to the computational environment indicated above, SignalP (http://www.cbs.dtu.dk/services/SignalP/, version 5.0b) has to be installed manually before running the scripts in this reposotory.
+In addition to the computational environment indicated above, SignalP (http://www.cbs.dtu.dk/services/SignalP/, version 5.0b) has to be installed manually before running the scripts in this repository.
 
 
 The Notebooks are abundantly annotated and should hopefully be self-explanatory. All data files needed to carry out the analysis and produce the related publication figures are included in the repository. Additionally, the full analysis requires the downloading of data files from the Zenodo data repository (http://doi.org/10.1016/j.cell.2018.10.023). The download should be carried out automatically when running the notebooks. **A pre-requisite for this** is that your system has `wget` and `unzip` installed (typically available in Unix systems). An alternative is to manually download the files and extract them. Finally, the analysis relies on accessory code from one of our other repositories (https://github.com/EngqvistLab/tome). This will be automatically installed if using Miniconda and the environment.yml file.
@@ -127,10 +127,10 @@ value type: integer
     ├── README.md                    <- The top-level README for developers using this project.
     │
     ├── code
-    │   ├── 1_parse_brenda_html_and_fasta.ipynb           <- Notebook
-    │   ├── 2_compute_entire_brenda_identities.ipynb      <- Notebook
-    │   ├── 3_get_brenda_domains.ipynb                    <- Notebook
-    │   └── environment.yml                               <- File
+    │   ├── 1_de-duplication_of_genes.ipynb   <- Notebook for de-duplicating fasta file genes
+    │   ├── 2_analyze_genomes.ipynb           <- Notebook for predicting CAZyme domains
+    │   ├── 3_phylo_tree_and_plots.ipynb      <- Notebook for making publication figures
+    │   └── environment.yml                   <- File specifying the computational environment
     │
     ├── data
     │   ├── final                    <- Folder holding output files of processed data
@@ -142,7 +142,7 @@ value type: integer
     │   │
     │   └── raw_external             <- Folder holding raw unmodified experimental data
     │       ├── dbcan                <- Folder
-    │       ├── phylo_tree           <- Folder containing the first selection of proteins
-    │       └── tempo_in_genome       <- Folder containing the second selection of proteins
+    │       ├── phylo_tree           <- Folder containing
+    │       └── tempo_in_genome      <- Folder containing
     │
-    └── doc                          <- Folder containing the pre-print article
+    └── doc                          <- Folder containing accessory information
